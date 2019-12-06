@@ -1,0 +1,67 @@
+<% provide(:title, "Contato") %>
+
+<section class="section">
+  <div class="container">
+    <div class="title">
+      Contato
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-4">
+        <%= form_with(url: contact_path, method: "post") do |f| %>
+        <div class="field">
+          <label class="label">Nome</label>
+          <div class="control">
+            <%= f.text_field :name, class: 'input', placeholder: 'Seu nome' %>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">E-mail</label>
+          <div class="control">
+            <%= f.email_field :email, class: 'input', placeholder: 'nome@exemplo.com' %>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Assunto</label>
+          <div class="control">
+            <%= f.text_field :subject, class: 'input', placeholder: 'Assunto' %>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Mensagem</label>
+          <div class="control">
+            <%= f.text_area :message, class: 'textarea', placeholder: 'Escreva sua mensagem...' %>
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <%= f.submit "Enviar mensagem", class: 'button is-link' %>
+          </div>
+        </div>
+        <% end %>
+        <% if flash[:notice] %>
+          <article class="message is-success">
+            <div class="message-body">
+              <%= flash[:notice] %>
+            </div>
+          </article>
+        <% elsif flash[:alert] %>
+          <article class="message is-danger">
+            <div class="message-body">
+              <%= flash[:alert] %>
+            </div>
+          </article>
+        <% end %>
+      </div>
+      <div class="column is-4 is-offset-1 has-background-white-ter is-flex is-hidden">
+        <p>
+          <strong>Telefone:</strong> &nbsp; (21) 99000-0000
+          <br />
+          <br />
+          <strong>Barra da Tijuca</strong>
+          <br />
+          Rio de Janeiro/RJ - Brasil
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

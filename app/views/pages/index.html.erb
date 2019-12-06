@@ -1,0 +1,57 @@
+<% provide(:title, "Soluções em engenharia para seu negócio") %>
+<% content_for :navbar do %>
+  <%= render 'layouts/header_home' %>
+<% end %>
+
+<section class="homeHero">
+  <%= image_tag "heroBg.jpg", size:"100%", class: "" %>
+  <div class="container">
+    <div class="heroTitle">
+      Soluções em engenharia <br />
+      para o seu negócio
+    </div>
+    <a href="/empresa">Saiba mais -></a>
+  </div>
+</section>
+
+<section class="section services">
+  <div class="container">
+    <div class="selectServices">
+      <div class="secTitle">
+        Serviços
+      </div>
+      <div class="secDesc">
+        Selecione o <strong>perfil</strong> em que você se identifica
+      </div>
+    </div>
+    <div class="selectOptions">
+      <a href="/servicos/1">
+        <div class="card">
+          <div>
+            <div class="servIcon">
+              <%= image_tag "condIcon.svg", size:"115", class: "" %>
+            </div>
+            <div class="servTitle">
+              Condomínios e <br />
+              Clientes Individuais
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="/servicos/2">
+        <div class="card">
+          <div>
+            <div class="servIcon">
+              <%= image_tag "industryIcon.svg", size:"115", class: "" %>
+            </div>
+            <div class="servTitle">
+              Grandes Clientes e <br />
+              Concessionárias de <br />
+              Serviços Públicos
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>

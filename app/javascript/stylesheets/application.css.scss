@@ -1,0 +1,35 @@
+$primary: #37395B;
+$info: #70B5B6;
+$link: $info;
+$link-hover: #9bcbcc;
+$navbar-item-color: $primary;
+$navbar-dropdown-item-hover-color: $info;
+$navbar-background-color: transparent;
+$family-primary: 'Inter', sans-serif;
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+$gap: 32px;
+$fullhd: 1250px + (2 * $gap);
+$title-color: $primary;
+$title-weight: 800;
+$text: $primary;
+$text-strong: $primary;
+$subtitle-color: #73748c;
+$subtitle-weight: 600;
+$subtitle-size: 0.85rem;
+
+@import '~bulma/bulma';
+@import 'inter';
+
+html, body { min-height: 100%; }
+html { position: relative; }
+body {
+  min-height: 100%;
+  margin-bottom: 380px;
+}
+
+.turbolinks-progress-bar {
+  height: 5px;
+  background-color: #70B5B6;
+}

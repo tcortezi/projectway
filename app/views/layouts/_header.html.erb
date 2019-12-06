@@ -1,0 +1,39 @@
+<%= javascript_pack_tag 'nav', defer: 'true' %>
+<nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+        <%= link_to image_tag("logo.svg", size:"225"), root_path, class:'navbar-item' %>
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="pwNavbar">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-end">
+      <div id="pwNavbar" class="navbar-menu">
+        <%= link_to 'EMPRESA', empresa_path, class: 'navbar-item' %>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link is-arrowless">
+            SERVIÇOS
+          </a>
+
+          <div class="navbar-dropdown is-boxed">
+            <a href="/servicos/1" class="navbar-item">
+              Condomínios e <br />Indivíduos
+            </a>
+            <a href="/servicos/2" class="navbar-item">
+              Grandes Clientes e <br />Serviços Públicos
+            </a>
+          </div>
+        </div>
+
+        <%= link_to 'CLIENTES', clientes_path, class: 'navbar-item' %>
+
+        <%= link_to 'RESULTADOS', resultados_path, class: 'navbar-item' %>
+        <div class="navbar-item">
+          <%= link_to 'Contato', contato_path, class:'button contactMenu' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

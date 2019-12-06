@@ -1,0 +1,26 @@
+<footer class="footer">
+  <div class="decorFooter">
+    <%= image_tag "decorFooter.svg", size:"100", class: "" %>
+  </div>
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <strong>Empresa</strong>
+        <%= link_to 'Quem somos', empresa_path %>
+        <%= link_to 'Nossa equipe', empresa_path %>
+      </div>
+      <div class="column">
+        <strong>Serviços</strong>
+        <%= link_to 'Condomínios e indivíduos', servicos_1_path %>
+        <%= link_to 'Grandes empresas e serviços públicos', servicos_2_path %>
+      </div>
+      <div class="column">
+        <strong>Outros links</strong>
+        <%= link_to 'Clientes', clientes_path %>
+        <%= link_to 'Resultados', resultados_path %>
+        <%= link_to 'Contato', contato_path %>
+      </div>
+    </div>
+    <%= link_to image_tag("logoFooter.svg", size:"225"), root_path %>
+  </div>
+</footer>
