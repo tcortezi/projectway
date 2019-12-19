@@ -1,4 +1,4 @@
-document.addEventListener("turbolinks:load", initItems())
+initItems()
 function initItems() {
   var item = document.querySelectorAll('.item')
   if(item) {
